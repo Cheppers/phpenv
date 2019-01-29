@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:16.04
 MAINTAINER Norbert Mozsar <mozsarn@5net.hu>
 
 # apache
@@ -23,6 +23,7 @@ RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     apache2 \
     libapache2-mod-rpaf \
     libapache2-mod-fastcgi \
+    locales \
     php7.2-cli \
     php7.2-mbstring \
     php7.2-xml \
