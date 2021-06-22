@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Norbert Mozsar <mozsarn@5net.hu>
+MAINTAINER Norbert Mozsar <norbert.mozsar@cheppers.com>
 
 # apache
 RUN apt-get update && \
