@@ -20,3 +20,13 @@ services:
     environment:
       APACHE_RELATIVE_DOCROOT: public
       XDEBUG_MODE: "develop,coverage,debug"
+
+  web72:
+    image: cheppers/phpenv:7.2
+    ports:
+      - "8082:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
