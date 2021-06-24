@@ -1,10 +1,20 @@
 version: "2.1"
 
 services:
+  web80:
+    image: cheppers/phpenv:8.0
+    ports:
+      - "8080:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
   web74:
     image: cheppers/phpenv:7.4
     ports:
-      - "8080:80"
+      - "8074:80"
     volumes:
       - ".:/project/"
     environment:
@@ -14,7 +24,7 @@ services:
   web73:
     image: cheppers/phpenv:7.3
     ports:
-      - "8081:80"
+      - "8073:80"
     volumes:
       - ".:/project/"
     environment:
@@ -24,7 +34,7 @@ services:
   web72:
     image: cheppers/phpenv:7.2
     ports:
-      - "8082:80"
+      - "8072:80"
     volumes:
       - ".:/project/"
     environment:
