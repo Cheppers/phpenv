@@ -1,6 +1,16 @@
 version: "2.1"
 
 services:
+  web81:
+    image: cheppers/phpenv:8.1
+    ports:
+      - "8081:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
   web80:
     image: cheppers/phpenv:8.0
     ports:
