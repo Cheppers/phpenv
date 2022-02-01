@@ -33,7 +33,7 @@ RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     php7.2-bcmath \
     php7.2-intl \
     php7.2-xdebug \
-    php-redis \
+    php7.2-redis \
     mysql-client \
     imagemagick \
     && \
